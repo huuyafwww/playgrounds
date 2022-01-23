@@ -12,8 +12,6 @@ services:
       - 3001:44777
     env_file:
       - ./src/api/.env
-    networks:
-      - playground_link
     platform: linux/x86_64
     volumes:
       - ./src/api:/usr/src/app
@@ -37,6 +35,3 @@ volumes:
   python_storage:
   php_storage:
   javascript_storage:
-networks:
-  playground_link:
-    external: true
