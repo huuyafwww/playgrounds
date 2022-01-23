@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+
+  api:
+    container_name: playground_api_container
+    build: &api-build
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+      target: api_runtime
+    ports:
+      - 3001:44777
+    env_file:
+      - ./src/api/.env
+    networks:
+      - playground_link
+    platform: linux/x86_64
+    volumes:
+      - ./src/api:/usr/src/app
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs/api:/var/log/gunicorn
+      - python_storage:/usr/src/python
+      - php_storage:/usr/src/php
+      - javascript_storage:/usr/src/javascript
+
+  python:
+    container_name: playground_python_container
+    build: &python-build
+      context: .
+      dockerfile: ./docker/python/Dockerfile
+      target: python_runtime
+    platform: linux/x86_64
+    volumes:
+      - python_storage:/usr/src/python
+
+volumes:
+  python_storage:
+  php_storage:
+  javascript_storage:
+networks:
+  playground_link:
+    external: true
