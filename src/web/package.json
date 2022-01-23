@@ -1,0 +1,65 @@
+{
+  "private": true,
+  "engines": {
+    "node": "16.13.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tailwind-config-viewer": "tailwind-config-viewer -o",
+    "eslint": "eslint -c ./.eslintrc.json './src/**/*.{js,jsx}' --fix",
+    "gulp:svg-minify": "gulp svg-minify",
+    "analyze": "vite build --mode analyze"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js, jsx}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "dayjs": "^1.10.7",
+    "nprogress": "^0.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-loading-icons": "^1.0.6",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@vitejs/plugin-react": "1.0.5",
+    "autoprefixer": "^10.4.0",
+    "babel-plugin-styled-components": "^1.13.3",
+    "daisyui": "^1.16.1",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "gulp": "^4.0.2",
+    "gulp-svgmin": "^4.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10",
+    "postcss": "^8.3.11",
+    "postcss-sorting": "^7.0.1",
+    "prettier": "^2.4.1",
+    "rollup-plugin-visualizer": "^5.5.2",
+    "tailwind-config-viewer": "^1.6.2",
+    "tailwindcss": "^2.2.19",
+    "vite": "^2.6.13",
+    "vite-plugin-react-svg": "^0.2.0"
+  }
+}

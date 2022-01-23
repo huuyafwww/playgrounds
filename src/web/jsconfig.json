@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "paths": {
+      "@react/*": [
+        "src/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@models/*": [
+        "src/models/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@helpers/*": [
+        "src/helpers/*"
+      ],
+      "@atoms/*": [
+        "src/atomic/atoms/*"
+      ],
+      "@molecules/*": [
+        "src/atomic/molecules/*"
+      ],
+      "@organisms/*": [
+        "src/atomic/organisms/*"
+      ],
+      "@pages/*": [
+        "src/atomic/pages/*"
+      ],
+      "@templates/*": [
+        "src/atomic/templates/*"
+      ],
+      "@routers/*": [
+        "src/atomic/routers/*"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules/*",
+    "public/*",
+  ]
+}

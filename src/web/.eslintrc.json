@@ -1,0 +1,55 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "legacyDecorators": true
+    },
+    "requireConfigFile": false,
+    "ecmaVersion": 8
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {},
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/prop-types": 0,
+    "react/display-name": 0,
+    "react/jsx-fragments": ["error", "element"],
+    "no-console": 0,
+    "no-unused-vars": [0],
+    "no-control-regex": 0,
+    "no-useless-escape": [0],
+    "no-irregular-whitespace": [0],
+    "react/jsx-no-bind": ["error", {
+      "ignoreDOMComponents": false,
+      "ignoreRefs": false,
+      "allowArrowFunctions": false,
+      "allowFunctions": false,
+      "allowBind": false
+    }],
+    "react/forbid-component-props": 0,
+    "react/no-arrow-function-lifecycle": 0,
+    "react/jsx-equals-spacing": [0, "never"],
+    "react-hooks/rules-of-hooks": "warn",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
